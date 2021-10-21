@@ -52,7 +52,7 @@ class HomeController extends Controller
 
     public function get_music(Request $request)
     {
-        $this->music($request->url);
+        return $this->music($request->url);
     }
 
     public function add_music(Request $request)
