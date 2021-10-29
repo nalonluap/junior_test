@@ -10573,6 +10573,14 @@ body.dark .sidebar.active .sidebar__burger {
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .products__banner {
+    height: 500px;
+  }
+}
+
+
 .products__grid .products__item .products__title {
   font-size: 19px;
 }
@@ -10660,13 +10668,60 @@ body.dark .products__grid .products__item {
   height: 396.18px;
   left: 376.34px;
   top: -72.19px;
+  background-repeat: no-repeat;
   background: url("../img/guitar.png") no-repeat center;
 }
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+  .products__banner .guitar-image {
+    position: absolute;
+    width: 420.31px;
+    height: 331.4px;
+    left: 252px;
+    top: -2px;
+
+    background: url("../img/guitar_mobile.png") no-repeat;
+  }
+}
+
 @media only screen and (min-width: 1300px) {
   .products__grid .products__item:hover {
     transform: scale(1.05);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products__banner {
+    width: 73%;
+    min-height: 250px;
+    cursor: default;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .products__banner {
+    width: 100%;
+    cursor: default;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px)  {
+  .products__banner .guitar-image {
+    position: absolute;
+    width: 587.38px;
+    height: 463.13px;
+    left: 0.83px;
+    top: 243.62px;
+    transform: scale(1.3);
+    background-repeat: no-repeat;
+
+    background: url("../img/guitar_mobile.png") no-repeat;
+  }
+}
+
+
 
 .products > .products__title {
   margin-bottom: 16px;
@@ -14661,7 +14716,6 @@ body.dark .sorting__action .icon {
   }
 
   .products__preview {
-    display: block;
     width: 55px;
     height: 55px;
   }
@@ -15343,4 +15397,8 @@ p.label {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
+}
+
+.guitar-image {
+  background-repeat: no-repeat;
 }
