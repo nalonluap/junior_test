@@ -10582,11 +10582,33 @@ body.dark .sidebar.active .sidebar__burger {
 
 
 .products__grid .products__item .products__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
   font-size: 19px;
+  line-height: 23px;
+/* identical to box height */
+
+
+  color: #808191;
 }
+
+.products__grid .products__item .author {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 23px;
+/* identical to box height */
+
+
+  color: #808191;
+}
+
 body.dark .products__grid .products__item {
   background: #242731;
 }
+
 .products__banner {
   width: 100%;
   min-height: 250px;
@@ -10621,10 +10643,11 @@ body.dark .products__grid .products__item {
   color: #242731;
 }
 .products__banner .banner-btn {
+  position: absolute;
   width: 163px;
   height: 47px;
-  left: 33px;
-  top: 175px;
+  /* left: 33px; */
+  top: 153px;
   margin-top: 20px;
   margin-left: 13px;
   display: flex;
@@ -10633,13 +10656,6 @@ body.dark .products__grid .products__item {
   padding: 13px;
 }
 .products__banner .banner-btn div {
-  position: static;
-  left: 7.98%;
-  right: 79.14%;
-  top: 27.66%;
-  bottom: 27.66%;
-  width: 21px;
-  height: 21px;
   border-radius: 100px;
   /* Inside Auto Layout */
   flex: none;
@@ -10668,11 +10684,12 @@ body.dark .products__grid .products__item {
   height: 396.18px;
   left: 376.34px;
   top: -72.19px;
+  transform: scale(1.03);
   background-repeat: no-repeat;
   background: url("../img/guitar.png") no-repeat center;
 }
 
-@media (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (max-width: 1024px)  {
   .products__banner .guitar-image {
     position: absolute;
     width: 420.31px;
@@ -10690,7 +10707,7 @@ body.dark .products__grid .products__item {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .products__banner {
     width: 73%;
     min-height: 250px;
@@ -10699,7 +10716,7 @@ body.dark .products__grid .products__item {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .products__banner {
     width: 100%;
     cursor: default;
@@ -10707,17 +10724,48 @@ body.dark .products__grid .products__item {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px)  {
-  .products__banner .guitar-image {
+@media only screen and (max-width: 350px) {
+  .products__banner .fan_text {
+    width: 220px;
+    height: 54px;
+    margin-top: 20px;
+    margin-left: 13px;
+    margin-right: 13px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 135%;
+    /* or 18px */
+    color: #242731;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .products__banner .banner-btn{
     position: absolute;
+    width: 163px;
+    height: 47px;
+    /* left: 33px; */
+    top: 170px;
+    margin-top: 20px;
+    margin-left: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px;
+  }
+}
+
+@media only screen and (max-width: 767px)  {
+  .products__banner .guitar-image {
     width: 587.38px;
     height: 463.13px;
     left: 0.83px;
-    top: 243.62px;
-    transform: scale(1.3);
+    top: 242.62px;
+    transform: scale(1.4);
     background-repeat: no-repeat;
-
-    background: url("../img/guitar_mobile.png") no-repeat;
+    background-image: url("../img/guitar_mobile.png") no-repeat;
   }
 }
 
@@ -10893,7 +10941,7 @@ body.dark .products__row_head {
 
 .products__preview > img {
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 100% ;
 }
 
 .products__preview.new {
@@ -15366,7 +15414,6 @@ body.dark .sorting__action .icon {
   right: 90px;
   top: 3%;
   bottom: 75.5%;
-  background: url("/img/Mask Copy 2.png");
   border-radius: 150px;
 }
 

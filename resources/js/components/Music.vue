@@ -56,13 +56,13 @@
             <div class="page__col">
 
                 <div class="products__banner" v-if="items.length <= 0">
+                    <div class="guitar-image"></div>
                     <div class="products__title title">Загрузи свой первый трек</div>
                     <p class="fan_text">Твои будущие фанаты ждут! Жми на кнопку «добавить трек» и переходи к продвижению прямо сейчас.</p>
                     <div class="btn btn-primary banner-btn" @click="openAddMusicModal">
                       <div><img src="/images/icon_plus_primary.svg"></img></div>
                       <span>Добавить трек</span>
                     </div>
-                    <div class="guitar-image"></div>
                 </div>
 
                 <div class="products__grid" v-else>
@@ -78,6 +78,8 @@
                         <div class="products__preview"><img v-bind:src="item.image"></div>
                         <div class="products__details">
                             <div class="products__title title" v-html="item.title"></div>
+                            <div class="author title" v-html="item.author"></div>
+
                         </div>
                     </div>
 
@@ -99,7 +101,7 @@
         </b-modal>
 
         <b-modal id="edit-music-modal" centered hide-footer>
-            <div class="avatar" v-bind:src="image"></div>
+            <img class="avatar" v-bind:src="image"></img>
             <div class="form-block-new">
               <div class="form-block__text">
                 <p class="label">Ссылка на звук в TikTok</p>
@@ -191,7 +193,7 @@
                     this.waiting = false;
 
                     /* TO DO */
-                    window.location.reload();
+                    this.getMusicList();
                     console.log(response);
 
                     this.error = null;
