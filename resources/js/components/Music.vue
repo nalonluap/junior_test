@@ -194,6 +194,7 @@
 
                     /* TO DO */
                     this.getMusicList();
+                    this.$bvModal.hide('edit-music-modal');
                     console.log(response);
 
                     this.error = null;
@@ -219,6 +220,7 @@
                     this.album = response.data.music.album;
                     this.image = response.data.music.coverThumb;
                     this.$bvModal.show('edit-music-modal');
+                    this.$bvModal.hide('add-music-modal');
                     console.log(response);
 
                     this.error = null;

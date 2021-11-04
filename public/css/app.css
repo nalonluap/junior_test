@@ -10724,6 +10724,13 @@ body.dark .products__grid .products__item {
   }
 }
 
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 400px;
+    left: 38px;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   .products__banner .fan_text {
     width: 220px;
